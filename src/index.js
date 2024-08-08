@@ -4,11 +4,10 @@ module.exports = function reverse (n) {
     }
     const numberToString = String(n).split('')
     const reversedArray = []
+    let firstIndex = 0;
     for (let i = numberToString.length - 1; i >= 0; i--) {
-        reversedArray.push(numberToString[i])
-    }
-    if(reversedArray[0] == 0) {
-        reversedArray.shift() 
+        reversedArray[firstIndex] = numberToString[i]
+        firstIndex++
     }
     const reversedString = reversedArray.join('')
     const stringToNumber = Number(reversedString)
